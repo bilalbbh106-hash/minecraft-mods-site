@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة مودات ماينكرافت العرب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- الأنميشن الخلفية -->
+    <div class="minecraft-background">
+        <div class="block-animation"></div>
+        <div class="particles"></div>
+    </div>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="شعار المكتبة">
+            <h1>مكتبة مودات ماينكرافت العرب</h1>
+        </div>
+        
+        <!-- شريط التنقل الأفقي -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#releases"><i class="fas fa-download"></i> الإصدارات</a></li>
+                <li><a href="#mods"><i class="fas fa-cube"></i> المودات</a></li>
+                <li><a href="#skins"><i class="fas fa-user"></i> الملابس والسكنات</a></li>
+                <li><a href="#maps"><i class="fas fa-map"></i> المابات والسيدات</a></li>
+                <li><a href="#premium"><i class="fas fa-crown"></i> المودات المدفوعة</a></li>
+            </ul>
+        </nav>
+        
+        <!-- شريط البحث -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="ابحث عن مود، سكن، خريطة...">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- الأقسام -->
+    <main>
+        <!-- قسم الإصدارات -->
+        <section id="releases" class="section">
+            <h2><i class="fas fa-download"></i> الإصدارات</h2>
+            <div class="posts-grid" id="releases-posts"></div>
+        </section>
+
+        <!-- قسم المودات -->
+        <section id="mods" class="section">
+            <h2><i class="fas fa-cube"></i> المودات</h2>
+            <div class="posts-grid" id="mods-posts"></div>
+        </section>
+
+        <!-- قسم الملابس -->
+        <section id="skins" class="section">
+            <h2><i class="fas fa-user"></i> الملابس والسكنات</h2>
+            <div class="posts-grid" id="skins-posts"></div>
+        </section>
+
+        <!-- قسم المابات -->
+        <section id="maps" class="section">
+            <h2><i class="fas fa-map"></i> المابات والسيدات</h2>
+            <div class="posts-grid" id="maps-posts"></div>
+        </section>
+
+        <!-- قسم المدفوعة -->
+        <section id="premium" class="section">
+            <h2><i class="fas fa-crown"></i> المودات المدفوعة</h2>
+            <div class="posts-grid" id="premium-posts"></div>
+        </section>
+    </main>
+
+    <!-- البنر الإعلاني -->
+    <div id="adBanner"></div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>© 2024 مكتبة مودات ماينكرافت العرب. جميع الحقوق محفوظة.</p>
+        <p>الزيارات: <span id="visitorCount">0</span></p>
+    </footer>
+
+    <!-- إعلان -->
+    <script>
+        // تحميل البنر الإعلاني
+        fetch('banner-ads.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('adBanner').innerHTML = data;
+            });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
