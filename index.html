@@ -3,95 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مكتبة مودات ماينكرافت العرب</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>🎮 مكتبة مودات ماينكرافت العرب | Minecraft Mods Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- الأنميشن الخلفية -->
-    <div class="minecraft-background">
-        <div class="block-animation"></div>
+<body class="minecraft-theme">
+    
+    <!-- 🌟 خلفية متحركة بتقنية CSS -->
+    <div class="bg-animation">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
         <div class="particles"></div>
+        <div class="nether-portal"></div>
     </div>
 
-    <!-- الهيدر -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="شعار المكتبة">
-            <h1>مكتبة مودات ماينكرافت العرب</h1>
-        </div>
-        
-        <!-- شريط التنقل الأفقي -->
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#releases"><i class="fas fa-download"></i> الإصدارات</a></li>
-                <li><a href="#mods"><i class="fas fa-cube"></i> المودات</a></li>
-                <li><a href="#skins"><i class="fas fa-user"></i> الملابس والسكنات</a></li>
-                <li><a href="#maps"><i class="fas fa-map"></i> المابات والسيدات</a></li>
-                <li><a href="#premium"><i class="fas fa-crown"></i> المودات المدفوعة</a></li>
-            </ul>
-        </nav>
-        
-        <!-- شريط البحث -->
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="ابحث عن مود، سكن، خريطة...">
-            <button id="searchBtn"><i class="fas fa-search"></i></button>
+    <!-- 🏰 الهيدر الرئيسي -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- الشعار -->
+                <div class="logo-section">
+                    <div class="logo-animation">
+                        <i class="fas fa-cube logo-icon"></i>
+                        <div class="logo-text">
+                            <h1 class="logo-title">مكتبة المودات العرب</h1>
+                            <span class="logo-subtitle">Minecraft Arabic Hub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🔍 شريط البحث المتقدم -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="🔍 ابحث عن مود، سكن، خريطة، ملابس...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-filters">
+                            <select id="searchFilter">
+                                <option value="all">كل المحتوى</option>
+                                <option value="mods">المودات</option>
+                                <option value="skins">الملابس</option>
+                                <option value="maps">المابات</option>
+                                <option value="releases">الإصدارات</option>
+                                <option value="premium">المدفوعة</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 👑 رابط لوحة التحكم -->
+                <div class="admin-access">
+                    <a href="admin.html" class="admin-btn">
+                        <i class="fas fa-crown"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- الأقسام -->
-    <main>
-        <!-- قسم الإصدارات -->
-        <section id="releases" class="section">
-            <h2><i class="fas fa-download"></i> الإصدارات</h2>
-            <div class="posts-grid" id="releases-posts"></div>
-        </section>
+    <!-- 🎯 شريط الأقسام الرئيسي (أفقي مع تمرير) -->
+    <div class="categories-section">
+        <div class="container">
+            <div class="categories-header">
+                <h2><i class="fas fa-layer-group"></i> أقسام المكتبة</h2>
+                <div class="scroll-indicator">
+                    <span class="scroll-text">اسحب للتجول</span>
+                    <i class="fas fa-arrows-left-right"></i>
+                </div>
+            </div>
+            
+            <!-- 📜 شريط التمرير الأفقي -->
+            <div class="categories-scroll">
+                <div class="scroll-wrapper">
+                    <button class="scroll-btn left-scroll">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="categories-container">
+                        <div class="categories-track" id="categoriesTrack">
+                            <!-- الأقسام سيتم إضافتها بالجافاسكريبت -->
+                        </div>
+                    </div>
+                    
+                    <button class="scroll-btn right-scroll">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- قسم المودات -->
-        <section id="mods" class="section">
-            <h2><i class="fas fa-cube"></i> المودات</h2>
-            <div class="posts-grid" id="mods-posts"></div>
-        </section>
+    <!-- 🎪 المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 📊 إحصائيات سريعة -->
+            <section class="quick-stats">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" id="totalDownloads">2,847</h3>
+                            <p class="stat-label">تحميل اليوم</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" id="onlineUsers">156</h3>
+                            <p class="stat-label">مستخدم نشط</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" id="totalMods">1,234</h3>
+                            <p class="stat-label">مود متاح</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" id="premiumMods">89</h3>
+                            <p class="stat-label">مود مميز</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- قسم الملابس -->
-        <section id="skins" class="section">
-            <h2><i class="fas fa-user"></i> الملابس والسكنات</h2>
-            <div class="posts-grid" id="skins-posts"></div>
-        </section>
+            <!-- 🎮 عرض المحتوى حسب الأقسام -->
+            <section class="content-sections">
+                <!-- كل قسم سيتم تحميله ديناميكياً -->
+                <div class="active-section" id="activeSection">
+                    <!-- المحتوى سيتغير حسب القسم المحدد -->
+                </div>
+            </section>
 
-        <!-- قسم المابات -->
-        <section id="maps" class="section">
-            <h2><i class="fas fa-map"></i> المابات والسيدات</h2>
-            <div class="posts-grid" id="maps-posts"></div>
-        </section>
-
-        <!-- قسم المدفوعة -->
-        <section id="premium" class="section">
-            <h2><i class="fas fa-crown"></i> المودات المدفوعة</h2>
-            <div class="posts-grid" id="premium-posts"></div>
-        </section>
+            <!-- 📱 قسم الموبايل (responsive) -->
+            <div class="mobile-categories">
+                <div class="mobile-cats-grid">
+                    <!-- سيتم نسخ الأقسام هنا للجوال -->
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- البنر الإعلاني -->
-    <div id="adBanner"></div>
+    <!-- 📢 قسم الإعلانات -->
+    <section class="advertisement-section">
+        <div class="container">
+            <div class="ad-banner" id="adBanner">
+                <!-- سيتم تحميل الإعلان هنا -->
+                <div class="ad-placeholder">
+                    <i class="fas fa-ad"></i>
+                    <span>مساحة إعلانية</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- الفوتر -->
-    <footer>
-        <p>© 2024 مكتبة مودات ماينكرافت العرب. جميع الحقوق محفوظة.</p>
-        <p>الزيارات: <span id="visitorCount">0</span></p>
+    <!-- 👣 الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-cube"></i>
+                    <h3>مكتبة مودات ماينكرافت العرب</h3>
+                    <p>المرجع العربي الأول لمودات وتعديلات ماينكرافت</p>
+                </div>
+                
+                <div class="footer-stats">
+                    <div class="footer-stat">
+                        <i class="fas fa-eye"></i>
+                        <div>
+                            <h4>الزوار اليوم</h4>
+                            <p id="todayVisitors">1,245</p>
+                        </div>
+                    </div>
+                    <div class="footer-stat">
+                        <i class="fas fa-server"></i>
+                        <div>
+                            <h4>إجمالي المحتوى</h4>
+                            <p id="totalContent">5,678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 مكتبة مودات ماينكرافت العرب. جميع الحقوق محفوظة.</p>
+                <p class="version">الإصدار 2.0 | Minecraft 1.20+</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- إعلان -->
-    <script>
-        // تحميل البنر الإعلاني
-        fetch('banner-ads.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('adBanner').innerHTML = data;
-            });
-    </script>
-    
+    <!-- ⚡ البوب أب للإعلانات (للمودات المدفوعة) -->
+    <div class="ad-modal" id="adModal">
+        <div class="ad-modal-content">
+            <div class="ad-modal-header">
+                <h3><i class="fas fa-gem"></i> محتوى مميز</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="ad-modal-body">
+                <div class="ad-timer">
+                    <div class="timer-circle">
+                        <svg class="timer-svg" width="120" height="120">
+                            <circle class="timer-bg" cx="60" cy="60" r="54"></circle>
+                            <circle class="timer-progress" cx="60" cy="60" r="54"></circle>
+                        </svg>
+                        <div class="timer-text">
+                            <span id="adSeconds">10</span>
+                            <small>ثانية</small>
+                        </div>
+                    </div>
+                </div>
+                <p class="ad-message">شاهد الإعلان لمدة 10 ثوانٍ للحصول على رابط التحميل</p>
+                <button class="start-ad-btn" id="startAdBtn">
+                    <i class="fas fa-play"></i> بدء المشاهدة
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📦 تحميل المكتبات -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
