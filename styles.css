@@ -1,0 +1,321 @@
+/* أنميات ماينكرافت */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+
+:root {
+    --mc-green: #5B7C3A;
+    --mc-dark: #2C2C2C;
+    --mc-light: #8AB4F8;
+    --mc-gold: #FFD700;
+    --mc-red: #FF5555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* الأنميشن الخلفية */
+.minecraft-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(91, 124, 58, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(138, 180, 248, 0.1) 0%, transparent 50%);
+}
+
+.block-animation {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%235B7C3A" stroke="%233A4F29" stroke-width="2"/></svg>');
+    animation: float 20s infinite linear;
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle, var(--mc-light) 1px, transparent 1px),
+        radial-gradient(circle, var(--mc-green) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px;
+    animation: particlesMove 100s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(100vw, 100vh) rotate(360deg); }
+}
+
+@keyframes particlesMove {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 1000px 1000px, 500px 500px; }
+}
+
+/* الهيدر */
+header {
+    background: rgba(44, 44, 44, 0.9);
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid var(--mc-green);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid var(--mc-gold);
+}
+
+.logo h1 {
+    color: var(--mc-gold);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* شريط التنقل */
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 1rem;
+    background: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    border: 2px solid var(--mc-green);
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    background: var(--mc-green);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(91, 124, 58, 0.4);
+}
+
+/* شريط البحث */
+.search-bar {
+    margin: 1rem auto;
+    max-width: 600px;
+    display: flex;
+    gap: 0;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid var(--mc-green);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    border-radius: 10px 0 0 10px;
+    font-size: 1.1rem;
+}
+
+#searchBtn {
+    background: var(--mc-green);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#searchBtn:hover {
+    background: var(--mc-light);
+}
+
+/* الأقسام */
+.section {
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    max-width: 1400px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    border: 2px solid var(--mc-green);
+    box-shadow: 0 0 30px rgba(91, 124, 58, 0.3);
+}
+
+.section h2 {
+    color: var(--mc-gold);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--mc-green);
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* شبكة المنشورات */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post-card {
+    background: rgba(44, 44, 44, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.post-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--mc-green);
+    box-shadow: 0 10px 30px rgba(91, 124, 58, 0.5);
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--mc-green);
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-title {
+    color: var(--mc-light);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.post-description {
+    color: #ccc;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.download-btn {
+    background: var(--mc-green);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.download-btn:hover {
+    background: var(--mc-light);
+}
+
+.premium-btn {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000;
+}
+
+.premium-btn:hover {
+    background: linear-gradient(45deg, #FFA500, #FFD700);
+}
+
+/* خاص بالمودات المدفوعة */
+.smart-link-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.smart-link-content {
+    background: var(--mc-dark);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 3px solid var(--mc-gold);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* إحصائيات */
+.stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(0,0,0,0.8);
+    border-radius: 15px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    color: var(--mc-green);
+    font-weight: 700;
+}
+
+.stat-label {
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0,0,0,0.9);
+    margin-top: 3rem;
+    border-top: 3px solid var(--mc-green);
+}
+
+/* البنر الإعلاني */
+#adBanner {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    text-align: center;
+}
