@@ -1,6 +1,6 @@
 // إعداد Supabase
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_KEY = 'YOUR_SUPABASE_KEY';
+const SUPABASE_URL = 'https://murkwfovzyqfcnuukjbg.supabase.co';
+const PABASE_UR';= sb_publishable_syvnjS658-RUe-KnWzD6jA_9_zd_iLI';
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // زيادة عداد الزوار
