@@ -3,248 +3,530 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎮 مكتبة مودات ماينكرافت العرب | Minecraft Mods Hub</title>
+    <title>🎮 مكتبة ماينكرافت الأسطورية | Epic Minecraft Library</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="minecraft-theme">
-    
-    <!-- 🌟 خلفية متحركة بتقنية CSS -->
-    <div class="bg-animation">
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="particles"></div>
-        <div class="nether-portal"></div>
+
+    <!-- 🌌 الخلفية الأسطورية -->
+    <div class="epic-background">
+        <!-- النجوم المتحركة -->
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        
+        <!-- كتل ماينكرافت طافية -->
+        <div class="floating-blocks">
+            <div class="block grass"></div>
+            <div class="block diamond"></div>
+            <div class="block gold"></div>
+            <div class="block emerald"></div>
+            <div class="block redstone"></div>
+        </div>
+        
+        <!-- تأثير نهاية -->
+        <div class="ender-effect"></div>
+        
+        <!-- دخان سحرية -->
+        <div class="magic-smoke"></div>
+        
+        <!-- بوابة Nether متحركة -->
+        <div class="nether-portal-animated"></div>
     </div>
 
-    <!-- 🏰 الهيدر الرئيسي -->
-    <header class="main-header">
+    <!-- 🏰 الهيدر الأسطوري -->
+    <header class="epic-header">
         <div class="container">
-            <div class="header-content">
-                <!-- الشعار -->
-                <div class="logo-section">
-                    <div class="logo-animation">
-                        <i class="fas fa-cube logo-icon"></i>
-                        <div class="logo-text">
-                            <h1 class="logo-title">مكتبة المودات العرب</h1>
-                            <span class="logo-subtitle">Minecraft Arabic Hub</span>
+            <div class="header-wrapper">
+                <!-- شعار متحرك -->
+                <div class="logo-wrapper animate__animated animate__pulse animate__infinite animate__slow">
+                    <div class="logo-3d">
+                        <div class="cube">
+                            <div class="face front"><i class="fas fa-cube"></i></div>
+                            <div class="face back"><i class="fas fa-gem"></i></div>
+                            <div class="face right"><i class="fas fa-crown"></i></div>
+                            <div class="face left"><i class="fas fa-magic"></i></div>
+                            <div class="face top"><i class="fas fa-star"></i></div>
+                            <div class="face bottom"><i class="fas fa-fire"></i></div>
+                        </div>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="glitch" data-text="مكتبة المودات الأسطورية">مكتبة المودات الأسطورية</h1>
+                        <p class="subtitle">عالم من الإبداع في عالم ماينكرافت</p>
+                        <div class="version-badge">
+                            <span class="badge">v3.0</span>
+                            <span class="badge">Minecraft 1.20+</span>
+                            <span class="badge pulse">🔥 ONLINE</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 🔍 شريط البحث المتقدم -->
-                <div class="search-container">
-                    <div class="search-box">
-                        <input type="text" id="searchInput" placeholder="🔍 ابحث عن مود، سكن، خريطة، ملابس...">
-                        <button class="search-btn">
+                <div class="search-wrapper">
+                    <div class="search-box epic">
+                        <div class="search-icon">
                             <i class="fas fa-search"></i>
-                        </button>
-                        <div class="search-filters">
-                            <select id="searchFilter">
-                                <option value="all">كل المحتوى</option>
-                                <option value="mods">المودات</option>
-                                <option value="skins">الملابس</option>
-                                <option value="maps">المابات</option>
-                                <option value="releases">الإصدارات</option>
-                                <option value="premium">المدفوعة</option>
-                            </select>
+                        </div>
+                        <input type="text" 
+                               id="searchInput" 
+                               placeholder="أدخل اسم المود، السكن، الخريطة أو الكلمة المفتاحية..." 
+                               autocomplete="off">
+                        <div class="search-actions">
+                            <button class="voice-search" title="بحث صوتي">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="filter-toggle" title="فلاتر متقدمة">
+                                <i class="fas fa-filter"></i>
+                            </button>
+                            <button class="search-btn epic-btn">
+                                <i class="fas fa-search"></i>
+                                بحث
+                            </button>
+                        </div>
+                    </div>
+                    <!-- فلاتر البحث -->
+                    <div class="search-filters">
+                        <div class="filter-tags">
+                            <span class="tag active">كل المحتوى</span>
+                            <span class="tag">شائع</span>
+                            <span class="tag">جديد</span>
+                            <span class="tag">مميز</span>
+                            <span class="tag">1.20+</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 👑 رابط لوحة التحكم -->
-                <div class="admin-access">
-                    <a href="admin.html" class="admin-btn">
-                        <i class="fas fa-crown"></i>
-                        <span>لوحة التحكم</span>
+                <!-- 👑 إحصائيات حية -->
+                <div class="live-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon online">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="onlineCount">247</span>
+                            <span class="stat-label">مستخدمون</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon downloads">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="downloadCount">12.5K</span>
+                            <span class="stat-label">تحميل/يوم</span>
+                        </div>
+                    </div>
+                    <a href="admin.html" class="admin-portal">
+                        <div class="portal-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <span>البوابة الملكية</span>
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 🎯 شريط الأقسام الرئيسي (أفقي مع تمرير) -->
-    <div class="categories-section">
-        <div class="container">
-            <div class="categories-header">
-                <h2><i class="fas fa-layer-group"></i> أقسام المكتبة</h2>
-                <div class="scroll-indicator">
-                    <span class="scroll-text">اسحب للتجول</span>
-                    <i class="fas fa-arrows-left-right"></i>
-                </div>
+    <!-- 🌈 شريط الأقسام الأسطوري -->
+    <nav class="epic-nav">
+        <div class="nav-container">
+            <!-- مؤشر التمرير -->
+            <div class="nav-scroll-indicator">
+                <div class="indicator-bar"></div>
             </div>
             
-            <!-- 📜 شريط التمرير الأفقي -->
-            <div class="categories-scroll">
-                <div class="scroll-wrapper">
-                    <button class="scroll-btn left-scroll">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                    
-                    <div class="categories-container">
-                        <div class="categories-track" id="categoriesTrack">
-                            <!-- الأقسام سيتم إضافتها بالجافاسكريبت -->
-                        </div>
+            <!-- شريط الأقسام -->
+            <div class="nav-scroller">
+                <button class="nav-scroll-btn left">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="nav-track-container">
+                    <div class="nav-track" id="navTrack">
+                        <!-- سيتم إضافة الأقسام هنا -->
                     </div>
-                    
-                    <button class="scroll-btn right-scroll">
-                        <i class="fas fa-chevron-left"></i>
+                </div>
+                
+                <button class="nav-scroll-btn right">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            
+            <!-- أقسام سريعة -->
+            <div class="quick-categories">
+                <div class="quick-cat-grid">
+                    <button class="quick-cat active" data-category="all">
+                        <i class="fas fa-globe"></i>
+                        <span>الكل</span>
+                    </button>
+                    <button class="quick-cat" data-category="trending">
+                        <i class="fas fa-fire"></i>
+                        <span>رائج</span>
+                    </button>
+                    <button class="quick-cat" data-category="new">
+                        <i class="fas fa-bolt"></i>
+                        <span>جديد</span>
+                    </button>
+                    <button class="quick-cat" data-category="featured">
+                        <i class="fas fa-star"></i>
+                        <span>مميز</span>
                     </button>
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 
     <!-- 🎪 المحتوى الرئيسي -->
-    <main class="main-content">
+    <main class="epic-main">
         <div class="container">
-            <!-- 📊 إحصائيات سريعة -->
-            <section class="quick-stats">
+            <!-- 🌟 البطل (Hero Section) -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 class="hero-title animate__animated animate__fadeInUp">
+                            <span class="highlight">أضف السحر</span> إلى عالم ماينكرافت
+                        </h2>
+                        <p class="hero-description">
+                            اكتشف آلاف المودات، السكنات، الخرائط والإضافات الأسطورية 
+                            التي ستغير طريقة لعبك إلى الأبد
+                        </p>
+                        <div class="hero-actions">
+                            <button class="epic-btn primary explore-btn">
+                                <i class="fas fa-compass"></i>
+                                استكشاف المكتبة
+                            </button>
+                            <button class="epic-btn secondary upload-btn">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                رفع مود
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-slider">
+                            <div class="slider-item active">
+                                <div class="mod-card featured">
+                                    <div class="mod-badge">⭐ مميز</div>
+                                    <div class="mod-image">
+                                        <img src="https://via.placeholder.com/400x250/00ff88/000?text=Epic+Mod" alt="مود مميز">
+                                    </div>
+                                    <div class="mod-info">
+                                        <h3>مملكة السحر</h3>
+                                        <p>أضف عالمًا سحريًا كاملًا</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 📊 الإحصائيات الحية -->
+            <section class="stats-section">
                 <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-download"></i>
+                    <div class="stat-card epic">
+                        <div class="stat-icon-wrapper">
+                            <i class="fas fa-dragon"></i>
                         </div>
-                        <div class="stat-info">
-                            <h3 class="stat-number" id="totalDownloads">2,847</h3>
-                            <p class="stat-label">تحميل اليوم</p>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-count="1254">0</h3>
+                            <p class="stat-label">مود سحري</p>
                         </div>
+                        <div class="stat-glow"></div>
                     </div>
                     
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-users"></i>
+                    <div class="stat-card epic">
+                        <div class="stat-icon-wrapper">
+                            <i class="fas fa-user-ninja"></i>
                         </div>
-                        <div class="stat-info">
-                            <h3 class="stat-number" id="onlineUsers">156</h3>
-                            <p class="stat-label">مستخدم نشط</p>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-count="856">0</h3>
+                            <p class="stat-label">سكن مميز</p>
                         </div>
+                        <div class="stat-glow"></div>
                     </div>
                     
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-cubes"></i>
+                    <div class="stat-card epic">
+                        <div class="stat-icon-wrapper">
+                            <i class="fas fa-map-marked-alt"></i>
                         </div>
-                        <div class="stat-info">
-                            <h3 class="stat-number" id="totalMods">1,234</h3>
-                            <p class="stat-label">مود متاح</p>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-count="432">0</h3>
+                            <p class="stat-label">خريطة أسطورية</p>
                         </div>
+                        <div class="stat-glow"></div>
                     </div>
                     
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-gem"></i>
+                    <div class="stat-card epic">
+                        <div class="stat-icon-wrapper">
+                            <i class="fas fa-crown"></i>
                         </div>
-                        <div class="stat-info">
-                            <h3 class="stat-number" id="premiumMods">89</h3>
-                            <p class="stat-label">مود مميز</p>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-count="89">0</h3>
+                            <p class="stat-label">مود ملكي</p>
+                        </div>
+                        <div class="stat-glow"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 🎯 عرض الأقسام -->
+            <section class="categories-display">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-layer-group"></i>
+                        الأقسام الرئيسية
+                    </h2>
+                    <div class="section-controls">
+                        <button class="view-toggle active" data-view="grid">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="view-toggle" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- محتوى الأقسام -->
+                <div class="categories-content" id="categoriesContent">
+                    <!-- سيتم تحميل الأقسام هنا -->
+                </div>
+            </section>
+
+            <!-- 🔥 المحتوى الشائع -->
+            <section class="trending-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-fire"></i>
+                        🔥 الأشهر هذا الأسبوع
+                    </h2>
+                    <a href="#" class="view-all">
+                        عرض الكل
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="trending-slider">
+                    <div class="swiper trendingSwiper">
+                        <div class="swiper-wrapper">
+                            <!-- سيتم إضافة العناصر الشائعة هنا -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 🆕 المحتوى الجديد -->
+            <section class="new-content-section">
+                <div class="tabs-container">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="new-mods">
+                            <i class="fas fa-bolt"></i>
+                            مودات جديدة
+                        </button>
+                        <button class="tab-btn" data-tab="new-skins">
+                            <i class="fas fa-user-astronaut"></i>
+                            سكنات جديدة
+                        </button>
+                        <button class="tab-btn" data-tab="new-maps">
+                            <i class="fas fa-map"></i>
+                            خرائط جديدة
+                        </button>
+                    </div>
+                    
+                    <div class="tabs-content">
+                        <div class="tab-pane active" id="new-mods">
+                            <!-- محتوى المودات الجديدة -->
+                        </div>
+                        <div class="tab-pane" id="new-skins">
+                            <!-- محتوى السكنات الجديدة -->
+                        </div>
+                        <div class="tab-pane" id="new-maps">
+                            <!-- محتوى الخرائط الجديدة -->
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 🎮 عرض المحتوى حسب الأقسام -->
-            <section class="content-sections">
-                <!-- كل قسم سيتم تحميله ديناميكياً -->
-                <div class="active-section" id="activeSection">
-                    <!-- المحتوى سيتغير حسب القسم المحدد -->
+            <!-- 💎 قسم المودات المدفوعة -->
+            <section class="premium-section">
+                <div class="premium-header">
+                    <div class="premium-badge">
+                        <i class="fas fa-gem"></i>
+                        <span>محتوى ملكي</span>
+                    </div>
+                    <h2 class="section-title">💎 المودات المدفوعة الحصرية</h2>
+                    <p class="section-subtitle">جودة استثنائية وأداء لا مثيل له</p>
+                </div>
+                
+                <div class="premium-grid">
+                    <!-- سيتم تحميل المودات المدفوعة هنا -->
                 </div>
             </section>
-
-            <!-- 📱 قسم الموبايل (responsive) -->
-            <div class="mobile-categories">
-                <div class="mobile-cats-grid">
-                    <!-- سيتم نسخ الأقسام هنا للجوال -->
-                </div>
-            </div>
         </div>
     </main>
 
     <!-- 📢 قسم الإعلانات -->
-    <section class="advertisement-section">
+    <section class="ad-section">
         <div class="container">
-            <div class="ad-banner" id="adBanner">
-                <!-- سيتم تحميل الإعلان هنا -->
-                <div class="ad-placeholder">
+            <div class="ad-container">
+                <div class="ad-label">
                     <i class="fas fa-ad"></i>
                     <span>مساحة إعلانية</span>
+                </div>
+                <div id="adContent" class="ad-content">
+                    <!-- سيتم تحميل الإعلان هنا -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 👣 الفوتر -->
-    <footer class="main-footer">
+    <!-- 👣 الفوتر الأسطوري -->
+    <footer class="epic-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-cube"></i>
-                    <h3>مكتبة مودات ماينكرافت العرب</h3>
-                    <p>المرجع العربي الأول لمودات وتعديلات ماينكرافت</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-mini">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>مكتبة المودات الأسطورية</h3>
+                        <p class="footer-description">
+                            أكبر مكتبة عربية لمودات ماينكرافت، 
+                            نقدم لكم أفضل المحتويات والأدوات
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="footer-stats">
-                    <div class="footer-stat">
-                        <i class="fas fa-eye"></i>
-                        <div>
-                            <h4>الزوار اليوم</h4>
-                            <p id="todayVisitors">1,245</p>
+                <div class="footer-col">
+                    <h4 class="footer-title">الأقسام</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-download"></i> الإصدارات</a></li>
+                        <li><a href="#"><i class="fas fa-cube"></i> المودات</a></li>
+                        <li><a href="#"><i class="fas fa-user-astronaut"></i> السكنات</a></li>
+                        <li><a href="#"><i class="fas fa-map"></i> الخرائط</a></li>
+                        <li><a href="#"><i class="fas fa-gem"></i> المدفوعة</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">الإحصائيات</h4>
+                    <div class="footer-stats">
+                        <div class="footer-stat">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <span class="stat-value" id="totalUsers">25.8K</span>
+                                <span class="stat-label">مستخدم</span>
+                            </div>
+                        </div>
+                        <div class="footer-stat">
+                            <i class="fas fa-download"></i>
+                            <div>
+                                <span class="stat-value" id="totalDownloads">1.2M</span>
+                                <span class="stat-label">تحميل</span>
+                            </div>
+                        </div>
+                        <div class="footer-stat">
+                            <i class="fas fa-server"></i>
+                            <div>
+                                <span class="stat-value" id="totalContent">2.5K</span>
+                                <span class="stat-label">محتوى</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer-stat">
-                        <i class="fas fa-server"></i>
-                        <div>
-                            <h4>إجمالي المحتوى</h4>
-                            <p id="totalContent">5,678</p>
-                        </div>
-                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> الدليل الشامل</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> الأمان والخصوصية</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                        <li><a href="admin.html"><i class="fas fa-crown"></i> لوحة التحكم</a></li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="copyright">
-                <p>© 2024 مكتبة مودات ماينكرافت العرب. جميع الحقوق محفوظة.</p>
-                <p class="version">الإصدار 2.0 | Minecraft 1.20+</p>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2024 مكتبة المودات الأسطورية. جميع الحقوق محفوظة.</p>
+                    <p class="crafted-with">
+                        مصنوع بـ <i class="fas fa-heart"></i> لعشاق ماينكرافت
+                    </p>
+                </div>
+                <div class="footer-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        الوضع الليلي
+                    </button>
+                    <button class="scroll-top" id="scrollTop">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- ⚡ البوب أب للإعلانات (للمودات المدفوعة) -->
-    <div class="ad-modal" id="adModal">
-        <div class="ad-modal-content">
-            <div class="ad-modal-header">
-                <h3><i class="fas fa-gem"></i> محتوى مميز</h3>
-                <button class="close-modal">&times;</button>
-            </div>
-            <div class="ad-modal-body">
-                <div class="ad-timer">
-                    <div class="timer-circle">
-                        <svg class="timer-svg" width="120" height="120">
-                            <circle class="timer-bg" cx="60" cy="60" r="54"></circle>
-                            <circle class="timer-progress" cx="60" cy="60" r="54"></circle>
-                        </svg>
-                        <div class="timer-text">
-                            <span id="adSeconds">10</span>
-                            <small>ثانية</small>
+    <!-- ⚡ النوافذ المنبثقة -->
+    <div class="modals-container">
+        <!-- نموذج المودات المدفوعة -->
+        <div class="modal premium-modal" id="premiumModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-gem"></i> محتوى ملكي</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="premium-unlock">
+                        <div class="unlock-animation">
+                            <i class="fas fa-lock-open"></i>
+                            <div class="unlock-ring"></div>
                         </div>
+                        <h4>تمكين المحتوى المميز</h4>
+                        <p>شاهد الإعلان لمدة 10 ثوانٍ لفتح رابط التحميل</p>
+                        <div class="ad-timer">
+                            <div class="timer-progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <span class="timer-text" id="modalTimer">10</span>
+                        </div>
+                        <button class="unlock-btn" id="startUnlock">
+                            <i class="fas fa-play"></i>
+                            بدء الفتح
+                        </button>
                     </div>
                 </div>
-                <p class="ad-message">شاهد الإعلان لمدة 10 ثوانٍ للحصول على رابط التحميل</p>
-                <button class="start-ad-btn" id="startAdBtn">
-                    <i class="fas fa-play"></i> بدء المشاهدة
-                </button>
             </div>
+        </div>
+        
+        <!-- نافذة البحث المتقدم -->
+        <div class="modal search-modal" id="searchModal">
+            <!-- محتوى البحث المتقدم -->
         </div>
     </div>
 
-    <!-- 📦 تحميل المكتبات -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- 📦 المكتبات -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
     </html>
